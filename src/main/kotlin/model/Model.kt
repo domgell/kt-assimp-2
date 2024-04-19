@@ -2,6 +2,8 @@ package model
 
 import animation.Animation
 import animation.Bone
+import model.AnimatedMesh
+import model.Mesh
 import org.joml.Matrix4fc
 
 data class StaticModel(val name: String, val meshes: List<Mesh>, val globalInverse: Matrix4fc)

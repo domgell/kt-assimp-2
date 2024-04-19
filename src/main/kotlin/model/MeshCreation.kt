@@ -42,6 +42,7 @@ fun createAnimatedMesh(aiMesh: AIMesh, boneMap: Map<String, Bone>): AnimatedMesh
         val boneIndex = boneMap[aiBone.mName().dataString()]?.index
             ?: throw IllegalArgumentException("Invalid bone map")
 
+        // Assign bone weights and influences
         aiBone.mWeights().forEach { aiWeight ->
             val vertexID = aiWeight.mVertexId()
             val influenceIndex = numBoneInfluences[vertexID]
